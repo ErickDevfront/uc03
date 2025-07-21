@@ -1,10 +1,10 @@
-class jogador{
+class Jogador{
       #nome;
       #aposta;
      constructor(nome, aposta){
         this.#nome = nome
         this.#aposta = aposta
-        object.freeze(this)
+        Object.freeze(this)
      }
     setNome (nome){
         this.#nome = nome
@@ -19,4 +19,4 @@ class jogador{
         return this.#aposta
     }
     }
-module.exports = {jogador, aposta}
+module.exports = {Jogador}

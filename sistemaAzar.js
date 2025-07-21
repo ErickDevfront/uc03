@@ -1,38 +1,46 @@
 const { Dado } = require("./dado");
 const { Jogador } = require("./jogador");
 
+
+
 class SistemaAzar {
     #jogador;
     #dado;
-constructor(jogador, dado) {
- if (dado instanceof Dado && jogador instanceof Jogador) {
- this.#jogador = jogador;
- this.#dado = dado;
+    constructor(jogador, dado) {
+        if (dado instanceof Dado && jogador instanceof Jogador) {
+            this.#jogador = jogador;
+            this.#dado = dado;
         }
-
- Object.freeze(this);
+        Object.freeze(this);
     }
+    setJogador(jogador) {
+        this.#jogador = jogador
+    }
+        setDado(aposta){
+        this.#dado = aposta
+    }
+
     getJogador() {
-        return this.#jogador;
+        return this.#jogador
     }
-
-    getDado() {
-        return this.#dado;
+    gatDado() {
+        return this.#dado
     }
+    verificarGanhador() {
 
-    verificarGanhador(aposta) {
-        const faces = this.#dado.getFaces();
-        const resultado = Math.floor(Math.random() * faces) + 1;
+       
+        if (this.#dado.getFaces() === this.#jogador.getAposta()) {
+            console.log(`parabens ${this.#jogador.getNome()}, voce é o ganhador`)
+            console.log(`parabens ${this.#jogador.getAposta()}, voce é o ganhador`)
+            console.log(`parabens ${this.#dado.getFaces()}, voce é o ganhador`)
 
-        console.log(`Resultado do dado: ${resultado}`);
-        if (aposta === resultado) {
-            console.log("Jogador ganhou!");
-            return true;
         } else {
-            console.log("Jogador perdeu!");
-            return false;
+            console.log(`parabens ${this.#jogador.getNome()}, voce é o ganhador`)
+            console.log(`parabens ${this.#jogador.getAposta()}, voce é o ganhador`)
+            console.log(`parabens ${this.#dado.getFaces()}, voce é o ganhador`)
         }
     }
 }
 
-module.exports = { SistemaAzar };
+
+module.exports = { SistemaAzar }

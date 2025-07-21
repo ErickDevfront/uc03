@@ -1,24 +1,24 @@
-class dado {
+class Dado {
   #faces;  
     
-    constructor(faces) {
+    constructor() {
         let facesRandom = Math.floor(Math.random()*6 + 1)
         this.#faces = facesRandom;
-        object.freeze(this)
+        Object.freeze(this)
     }
     setFaces(faces) {
         this.#faces = faces;
     }
 
     getFaces(){
-        return this.#faces
+        return this.#faces;
     }
 }
 
-    module.exports = {dado};
+    module.exports = {Dado};
 
-    let d1 = new dado ();
-    console.log(d1.getFaces());
+    //let d1 = new Dado (); //
+    //console.log(d1.getFaces());//
 
 
 
