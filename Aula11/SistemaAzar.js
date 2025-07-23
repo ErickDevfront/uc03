@@ -16,14 +16,14 @@ class SistemaAzar {
     setJogador(jogador) {
         this.#jogador = jogador
     }
-        setDado(aposta){
-        this.#dado = aposta
+        setDado(dado){
+        this.#dado = dado
     }
 
     getJogador() {
         return this.#jogador
     }
-    gatDado() {
+    getDado() {
         return this.#dado
     }
     verificarGanhador() {

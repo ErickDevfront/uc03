@@ -17,7 +17,7 @@ class Dado {
 
     module.exports = {Dado};
 
-    //let d1 = new Dado (); //
+    let d1 = new Dado (); 
     //console.log(d1.getFaces());//
 
 

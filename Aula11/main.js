@@ -11,7 +11,7 @@ function iniciarSistema(){
     console.log ("Bem vindo ao undefined177");
     do{
      
-        let nome = prompt ("informe seu nome")
+     let nome = prompt ("informe seu nome")
      let aposta = parseInt(prompt("Digite um valor de 1 a 6:"));
      let lancamento = new Dado();
      let jogador = new Jogador (nome, aposta);
