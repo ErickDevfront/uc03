@@ -6,4 +6,6 @@ let pessoa = new Pessoa ("Thalles", "17")
 let aluno = new Aluno ("Thalles", "17", "12", "TecnologiaTI" )
 let professor = new Professor ("Joel", "30", "32", "TecnologiaTi", "12")
 
-console.log(pessoa, aluno, professor)
+console.table(pessoa);
+console.table(aluno);
+console.table(professor)
